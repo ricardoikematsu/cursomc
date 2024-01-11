@@ -37,12 +37,20 @@ public class ItemPedido implements Serializable {
 	}
 	
 	@JsonIgnore
-	public Pedido gePedido() {
+	public Pedido getPedido() {
 		return id.getPedido();
 	}
 	
-	public Produto geProduto() {
+	public void setPedido(Pedido pedido) {
+		id.setPedido(pedido);
+	}
+	
+	public Produto getProduto() {
 		return id.getProduto();
+	}
+	
+	public void setProduto(Produto produto) {
+		id.setProduto(produto);
 	}
 
 	public ItemPedidoPK getId() {
